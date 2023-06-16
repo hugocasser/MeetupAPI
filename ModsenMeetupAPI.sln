@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.SpeakerService", "Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.Identity", "Meetup.Identity\Meetup.Identity.csproj", "{B80C0EF6-4C83-4D81-823A-B317F599D013}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.APIGateWay", "Meetup.APIGateWay\Meetup.APIGateWay.csproj", "{CA63BE8D-3DE2-4564-A5CC-34E3B6888AD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA63BE8D-3DE2-4564-A5CC-34E3B6888AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA63BE8D-3DE2-4564-A5CC-34E3B6888AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA63BE8D-3DE2-4564-A5CC-34E3B6888AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA63BE8D-3DE2-4564-A5CC-34E3B6888AD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
