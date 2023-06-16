@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.Info", "Meetup.Info\Meetup.Info.csproj", "{F66C4750-A858-4477-AD8A-6513719461B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.SpeakerService", "Meetup.SpeakerService\Meetup.SpeakerService.csproj", "{99C3C94B-B5EF-45DE-BD65-0D9DFBFE6246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.Identity", "Meetup.Identity\Meetup.Identity.csproj", "{B80C0EF6-4C83-4D81-823A-B317F599D013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F66C4750-A858-4477-AD8A-6513719461B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66C4750-A858-4477-AD8A-6513719461B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66C4750-A858-4477-AD8A-6513719461B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66C4750-A858-4477-AD8A-6513719461B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C3C94B-B5EF-45DE-BD65-0D9DFBFE6246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C3C94B-B5EF-45DE-BD65-0D9DFBFE6246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C3C94B-B5EF-45DE-BD65-0D9DFBFE6246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C3C94B-B5EF-45DE-BD65-0D9DFBFE6246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80C0EF6-4C83-4D81-823A-B317F599D013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
