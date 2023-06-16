@@ -25,7 +25,6 @@
       <Folder Include="Controllers\" />
       <Folder Include="Extensions\" />
       <Folder Include="Middleware\" />
-      <Folder Include="Migrations\" />
       <Folder Include="Services\" />
     </ItemGroup>
 

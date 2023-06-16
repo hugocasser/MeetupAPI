@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Meetup.SpeakerService.Persistence.Configuration;
 
 
-public class AuthorConfiguration : IEntityTypeConfiguration<Speaker>
+public class SpeakerConfiguration : IEntityTypeConfiguration<Speaker>
 {
     public void Configure(EntityTypeBuilder<Speaker> builder)
     {
