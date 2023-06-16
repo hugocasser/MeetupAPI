@@ -1,0 +1,11 @@
+name: modsen.library-api
+services:
+  - name: meetup-info
+    project: Meetup.Info/Meetup.Info.csproj
+    bindings:
+      - port: 4001
+  - name: modsen-meetup-dev
+    external: true
+    bindings:
+      - port: 5432
+        connectionString: Host=localhost;Port=${port};Username=modsen_meetup_dev;Password=modsen_meetup_dev;
