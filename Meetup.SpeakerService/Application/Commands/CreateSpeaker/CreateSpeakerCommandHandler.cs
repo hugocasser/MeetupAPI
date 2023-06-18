@@ -4,7 +4,7 @@ using Meetup.SpeakerService.Models;
 
 namespace Meetup.SpeakerService.Application.Commands.CreateSpeaker;
 
-public class CreateSpeakerCommandHandler : IRequestHandler<CreateSpeakerCommand>
+public class CreateSpeakerCommandHandler : IRequestHandler<CreateSpeakerCommand, Speaker>
 {
     private readonly ISpeakerRepository _speakerRepository;
 
@@ -12,7 +12,7 @@ public class CreateSpeakerCommandHandler : IRequestHandler<CreateSpeakerCommand>
     {
         _speakerRepository = speakerRepository;
     }
-    public async Task Handle(CreateSpeakerCommand request, CancellationToken cancellationToken)
+    public async Task<Speaker> Handle(CreateSpeakerCommand request, CancellationToken cancellationToken)
     {
         var speaker = new Speaker
         {
@@ -24,5 +24,6 @@ public class CreateSpeakerCommandHandler : IRequestHandler<CreateSpeakerCommand>
 
         await _speakerRepository.CreateSpeakerAsync(speaker);
         await _speakerRepository.SaveChangesAsync();
+        return speaker;
     }
 }

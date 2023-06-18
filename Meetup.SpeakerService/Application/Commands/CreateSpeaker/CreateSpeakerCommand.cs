@@ -3,7 +3,7 @@ using Meetup.SpeakerService.Models;
 
 namespace Meetup.SpeakerService.Application.Commands.CreateSpeaker;
 
-public class CreateSpeakerCommand : IRequest<Speaker>, IRequest
+public class CreateSpeakerCommand : IRequest<Speaker>
 {
     public required string FirstName { get; set; }
     public required string LastName { get; set; }

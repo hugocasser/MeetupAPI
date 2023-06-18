@@ -1,6 +1,9 @@
-﻿namespace Meetup.SpeakerService.Application.Commands.GetSpeakersQuery;
+﻿using MediatR;
+using Meetup.SpeakerService.Application.DTOs;
 
-public class GetSpeakersQuery
+namespace Meetup.SpeakerService.Application.Commands.GetSpeakersQuery;
+
+public class GetSpeakersQuery  : IRequest<IEnumerable<SpeakerDetailsDTO>>
 {
     
 }
