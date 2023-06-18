@@ -19,16 +19,4 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseCors("AllowAll");
 app.InitializeServiceContextProvider();
-using var scope = app.Services.CreateScope();
-var serviceProvider = scope.ServiceProvider;
-try
-{
-    var eventInfoDbContext = serviceProvider.GetRequiredService<EventInformationDbContext>();
-    eventInfoDbContext.Database.EnsureCreated();
-    
-}
-catch (Exception ex)
-{
-    
-}
 app.Run();

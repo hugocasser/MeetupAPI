@@ -1,2 +1,2 @@
 # ModsenMeetupAPI
- Test task for modsen intership
+ Test task for modsen internship

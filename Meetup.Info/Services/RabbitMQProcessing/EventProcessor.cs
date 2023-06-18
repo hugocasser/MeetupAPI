@@ -25,13 +25,13 @@ public class EventProcessor : IEventProcessor
         var eventType = DetermineEvent(message);
         switch (eventType)
         {
-            case EventType.AuthorPublished:
+            case EventType.SpeakerPublished:
                 AddSpeaker(message);
                 break;
-            case EventType.AuthorDeleted:
+            case EventType.SpeakerDeleted:
                 DeleteSpeaker(message);
                 break;
-            case EventType.AuthorUpdated:
+            case EventType.SpeakerUpdated:
                 UpdateSpeaker(message);
                 break;
         }
@@ -96,9 +96,9 @@ public class EventProcessor : IEventProcessor
         var eventType = JsonSerializer.Deserialize<GenericEventDto>(notificationMessage);
         return eventType?.Event switch
         {
-            "Author_Published" => EventType.AuthorPublished,
-            "Author_Updated" => EventType.AuthorUpdated,
-            "Author_Deleted" => EventType.AuthorDeleted,
+            "Speaker_Published" => EventType.SpeakerPublished,
+            "Speaker_Updated" => EventType.SpeakerUpdated,
+            "Speaker_Deleted" => EventType.SpeakerDeleted,
             _ => EventType.Undetermined
         };
     }

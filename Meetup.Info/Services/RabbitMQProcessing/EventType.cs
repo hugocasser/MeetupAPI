@@ -2,8 +2,8 @@
 
 public enum EventType
 {
-    AuthorPublished,
-    AuthorUpdated,
-    AuthorDeleted,
+    SpeakerPublished,
+    SpeakerUpdated,
+    SpeakerDeleted,
     Undetermined
 }

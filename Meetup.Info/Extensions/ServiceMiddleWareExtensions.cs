@@ -28,7 +28,7 @@ public static class ServiceMiddleWareExtensions
             .AddApplication()
             .AddPersistence(builder.Configuration);
             //.AddServices();
-        
+
         builder.Services.AddCors(options =>
             options.AddPolicy("AllowAll", policy =>
             {
@@ -46,8 +46,8 @@ public static class ServiceMiddleWareExtensions
         var serviceProvider = scope.ServiceProvider;
         try
         {
-            var authorDbContext = serviceProvider.GetRequiredService<EventInformationDbContext>();
-            authorDbContext.Database.EnsureCreated();
+            var infoDbContext = serviceProvider.GetRequiredService<EventInformationDbContext>();
+            infoDbContext.Database.EnsureCreated();
         }
         catch (Exception ex)
         {
