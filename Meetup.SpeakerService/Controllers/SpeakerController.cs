@@ -23,8 +23,9 @@ public class SpeakersController : ControllerBase
     private IMediator? _mediator;
     private IMediator? Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
     
-    public SpeakersController(IMapper mapper, IMessageBusClient messageBusClient)
+    public SpeakersController(IMapper mapper, IMessageBusClient messageBusClient, IMediator? mediator)
     {
+        _mediator = mediator;
         _mapper = mapper;
         _messageBusClient = messageBusClient;
     }

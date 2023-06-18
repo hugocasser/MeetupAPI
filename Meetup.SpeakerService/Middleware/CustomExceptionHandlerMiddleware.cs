@@ -9,11 +9,10 @@ namespace Meetup.SpeakerService.Middleware;
 public class CustomExceptionHandlerMiddleware
 {
     private readonly RequestDelegate _next;
+    
 
-    public CustomExceptionHandlerMiddleware(RequestDelegate next)
-    {
+    public CustomExceptionHandlerMiddleware(RequestDelegate next) =>
         _next = next;
-    }
 
     public async Task Invoke(HttpContext context)
     {
@@ -21,33 +20,31 @@ public class CustomExceptionHandlerMiddleware
         {
             await _next(context);
         }
-        catch (Exception exception)
+        catch (Exception ex)
         {
-            await HandleExceptionAsync(context, exception);
+            await HandleExceptionAsync(context, ex);
         }
     }
 
-    private Task HandleExceptionAsync(HttpContext context, Exception exception)
+    public  Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
         var code = HttpStatusCode.InternalServerError;
         var result = string.Empty;
-        switch (exception)
+        switch (ex)
         {
             case ValidationException validationException:
                 code = HttpStatusCode.BadRequest;
-                result = JsonSerializer.Serialize(validationException.Message);
-                break;
-            case NotFoundException<Speaker> notFoundException:
-                code = HttpStatusCode.NotFound;
-                result = JsonSerializer.Serialize(notFoundException.Message);
+                result = JsonSerializer.Serialize(validationException.ValidationResult);
                 break;
         }
 
-        context.Request.ContentType = "application/json";
+        context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)code;
 
         if (result == string.Empty)
-            result = JsonSerializer.Serialize(new { error = exception.Message });
+        {
+            result = JsonSerializer.Serialize(new { errpr = ex.Message });
+        }
 
         return context.Response.WriteAsync(result);
     }

@@ -27,7 +27,7 @@ public static class ServiceMiddlewareExtensions
         });
         
         builder.Services
-            .AddServices()
+            //.AddServices()
             .AddApplication()
             .AddPersistence(builder.Configuration);
         
