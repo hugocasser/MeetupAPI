@@ -18,7 +18,7 @@ public class SpeakerRepository : ISpeakerRepository
         return await _context.Speakers.ToListAsync();
     }
 
-    public async Task<Speaker?> GetSpeakerByIdASync(Guid id)
+    public async Task<Speaker?> GetSpeakerByIdAsync(Guid id)
     {
         return await _context.Speakers.FirstOrDefaultAsync(speaker => speaker.Id == id);
     }
@@ -37,7 +37,7 @@ public class SpeakerRepository : ISpeakerRepository
 
     public async Task DeleteSpeakerAsync(Guid id)
     {
-        var speaker = await GetSpeakerByIdASync(id);
+        var speaker = await GetSpeakerByIdAsync(id);
         if (speaker is null)
             return;
                 
@@ -46,7 +46,7 @@ public class SpeakerRepository : ISpeakerRepository
 
     public async Task UpdateSpeakerAsync(Speaker speaker)
     {
-        var speakerToUpdate = await GetSpeakerByIdASync(speaker.Id);
+        var speakerToUpdate = await GetSpeakerByIdAsync(speaker.Id);
         if( speakerToUpdate is null)
             return;
         speakerToUpdate.FirstName = speaker.FirstName;
