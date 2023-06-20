@@ -59,14 +59,14 @@ public class SpeakerEventController : ControllerBase
 
     [SwaggerOperation(Summary = "Update Event by Speaker Id and Event Id")]
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<EventDetailsDTO>> UpdateEvent(Guid speakerId, Guid id, [FromBody] EventUpdateDTO eventUpdateDTO)
+    public async Task<ActionResult<EventDetailsDTO>> UpdateEvent(Guid speakerId, [FromBody] EventUpdateDTO eventUpdateDTO)
     {
         if (Mediator is null)
             return BadRequest("Internal server error");
 
         var updateEventCommand = new UpdateEventCommand
         {
-            Id = id,
+            Id = eventUpdateDTO.Id,
             SpeakerId = speakerId,
             Title = eventUpdateDTO.Title,
             Place = eventUpdateDTO.Place,
