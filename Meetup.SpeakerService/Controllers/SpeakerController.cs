@@ -58,7 +58,7 @@ public class SpeakersController : ControllerBase
     
     [SwaggerOperation(Summary = "Create speaker")]
     [HttpPost]
-    public async Task<ActionResult<SpeakerDetailsDTO>> CreateAuthor([FromBody] CreateSpeakerCommand createSpeakerCommand)
+    public async Task<ActionResult<SpeakerDetailsDTO>> CreateSpeaker([FromBody] CreateSpeakerCommand createSpeakerCommand)
     {
         if (Mediator is null)
             return BadRequest("Internal server error");

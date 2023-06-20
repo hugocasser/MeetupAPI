@@ -13,9 +13,9 @@ public class SpeakerPublishDTO
         profile.CreateMap<SpeakerDetailsDTO, SpeakerPublishDTO>()
             .ForMember(
                 dto => dto.Id,
-                expression => expression.MapFrom(authorsDto => authorsDto.Id))
+                expression => expression.MapFrom(speakerDto => speakerDto.Id))
             .ForMember(
                 dto => dto.Name,
-                expression => expression.MapFrom(authorsDto => $"{authorsDto.FirstName} {authorsDto.LastName}"));
+                expression => expression.MapFrom(speakerDto => $"{speakerDto.FirstName} {speakerDto.LastName}"));
     }
 }
