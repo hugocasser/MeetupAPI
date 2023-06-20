@@ -1,9 +1,22 @@
 name: modsen.library-api
 services:
-  - name: meetup-info
+  - name: modsen-speakers
+    project: Meetup.SpeakerService/Meetup.SpeakerService.csproj
+    bindings:
+      - port: 3001
+  - name: modsen-info
     project: Meetup.Info/Meetup.Info.csproj
     bindings:
       - port: 4001
+  - name: modsen-meetup
+    project: Meetup/Meetup.csproj
+    bindings:
+      - port: 7001
+  - name: rabbit
+    image: rabbitmq:3-management
+    bindings:
+      - protocol: amqp
+        port: 5001
   - name: modsen-meetup-dev
     external: true
     bindings:
