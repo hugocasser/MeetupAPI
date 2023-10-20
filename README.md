@@ -1,6 +1,5 @@
-# ModsenMeetupAPI
- Test task for modsen internship:CRUD Web API for working with events (creation, modification, deletion,
-receipt)
+# MeetuAPI
+ Microservice web application to work with events. 
 # Technologies used:
 1. .Net 7;
 2. Entity Framework Core;
